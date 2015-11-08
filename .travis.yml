@@ -1,9 +1,20 @@
 language: php
 
+mysql:
+  database: testlink_test
+  username: root
+  encoding: utf8
+
 #
 install:
   - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
 
 
 # Custom PHP configuration #
-before_script: phpenv config-add myconfig.ini
+before_script:
+  - phpenv config-add myconfig.ini
+
+  # create new db, set up configuration parameters
+  - mysql -e 'create database testlink_test'
+
+script:
