@@ -17,4 +17,6 @@ before_script:
   # create new db, set up configuration parameters
   - mysql -e 'create database testlink_test'
 
-script:
+# omitting "script:" will default to phpunit
+# use the $DB env variable to determine the phpunit.xml to use
+script: phpunit --configuration phpunit_$DB.xml --coverage-text
