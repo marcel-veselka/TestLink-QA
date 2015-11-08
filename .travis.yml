@@ -1,1 +1,9 @@
 language: php
+
+#
+install:
+  - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
+
+
+# Custom PHP configuration #
+before_script: phpenv config-add myconfig.ini
