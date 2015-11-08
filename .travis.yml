@@ -8,6 +8,7 @@ mysql:
 #
 install:
   - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
+  - pwd
   - ls -la Tests
   - ls -la testlink-code
 
