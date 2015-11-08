@@ -8,7 +8,8 @@ mysql:
 #
 install:
   - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
-  - ls -la
+  - ls -la Tests
+  - ls -la testlink-code
 
 
 # Custom PHP configuration #
