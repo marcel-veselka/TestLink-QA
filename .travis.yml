@@ -13,6 +13,8 @@ install:
   # install TestLink
   - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
 
+  # TBD - TestLink final deployment
+
   # install selenium
   - composer install
 
@@ -26,11 +28,6 @@ before_script:
 
   # create new db, set up configuration parameters
   - mysql -e 'create database testlink_test'
-
-# omitting "script:" will default to phpunit
-# use the $DB env variable to determine the phpunit.xml to use
-# script: phpunit --configuration phpunit_mysql.xml --coverage-text
-script: phpunit --configuration phpunit.xml
 
 after_script:
   - cat selenium.log
