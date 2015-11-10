@@ -11,7 +11,7 @@ before_install:
 #
 install:
   # install TestLink
-  - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
+  # - git clone https://github.com/TestLinkOpenSourceTRMS/testlink-code.git
 
   # TBD - TestLink final deployment
 
@@ -20,7 +20,7 @@ install:
 
   # Download and run server version.
   - wget http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.2.jar
-  - java -jar selenium-server-standalone-2.48.2.jar -log selenium.log &
+  - java -jar selenium-server-standalone-2.48.2.jar -htmlSuite *firefox -log selenium.log &
 
   - ls -la vendor
 
