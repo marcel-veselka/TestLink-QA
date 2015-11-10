@@ -22,7 +22,7 @@ install:
   - wget http://selenium-release.storage.googleapis.com/2.48/selenium-server-standalone-2.48.2.jar
   - java -jar selenium-server-standalone-2.48.2.jar -log selenium.log &
 
-  - ls -la vendor/facebook/*
+  - ls -la vendor/facebook/lib/*
 
 # Custom PHP configuration #
 before_script:
@@ -31,8 +31,6 @@ before_script:
   # create new db, set up configuration parameters
   - mysql -e 'create database testlink_test'
 
-  - ./tests/setup/apache.sh
-  - ./tests/setup/selenium.sh
 
 script: phpunit --verbose -c tests/phpunit.xml
 
