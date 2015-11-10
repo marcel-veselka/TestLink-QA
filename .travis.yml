@@ -31,5 +31,10 @@ before_script:
   # create new db, set up configuration parameters
   - mysql -e 'create database testlink_test'
 
+  - ./tests/setup/apache.sh
+  - ./tests/setup/selenium.sh
+
+script: phpunit --verbose -c tests/phpunit.xml
+
 after_script:
   - cat selenium.log
